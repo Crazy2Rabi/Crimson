@@ -1,0 +1,48 @@
+<packets package="arpg.packets" version="0.1.1">
+    <!-- name的首字母需要大写 -->
+    <packet name="PreLoginReq" id="1" des="预登陆请求">
+        <field name="CheckCode" type="uint32" />
+    </packet>
+    <packet name="PreLoginRes" id="2" des="预登陆返回" />
+
+    <packet name="LoginReq" id="3" des="登陆请求">
+        <field name="Account" type="string" />
+        <field name="Token" type="string" />
+        <field name="SdkToken" type="string" />
+    </packet>
+    <packet name="LoginRes" id="4" des="预登陆返回">
+        <field name="Token" type="string" />
+    </packet>
+
+    <packet name="EnterReq" id="5" des="进入游戏请求">
+        <field name="Zone" type="uint64" />
+    </packet>
+    <packet name="EnterRes" id="6" des="进入游戏返回">
+        <field name="PlayerInfo" type="PlayerInfo" des="玩家信息"/>
+    </packet>
+
+    <packet name="GetItemInfoReq" id="101" des="请求背包信息">
+    </packet>
+    <packet name="GetItemInfoRes" id="102" des="请求背包信息返回">
+        <field name="Items" type="Item" refType="refArray" des="背包信息" />
+    </packet>
+
+    <packet name="TestMessage" id="10001" des="测试用消息">
+        <field name="Context" type="string" des="文本" />
+    </packet>
+
+
+    <ref name="PlayerInfo" des="玩家信息">
+        <field name="Uid" type="uint64" des="Uid"/>
+        <field name="Name" type="string" des="名称"/>
+        <field name="Gender" type="int8" des="性别"/>
+        <field name="HeadId" type="int32" des="头像Id"/>
+    </ref>
+    <ref name="Item" des="物品">
+        <field name="Id" type="int32" des="物品id" />
+        <field name="Num" type="int32" des="物品数量" />
+    </ref>
+    <ref name="Test" des="测试">
+        <field name="Id" type="int32" des="Id" />
+    </ref>
+</packets>

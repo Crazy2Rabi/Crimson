@@ -1,0 +1,8 @@
+{
+  "App": {
+    "Id": 1,
+    "Zone": 1,
+    "Name": "Crazy2-Server",
+    "Addr": ":9000"
+  }
+}
