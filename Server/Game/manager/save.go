@@ -1,7 +1,7 @@
 package manager
 
 import (
-	"Common/Utils/def"
+	"Common/def"
 	"Game/player"
 	"errors"
 	"fmt"

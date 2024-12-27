@@ -1,7 +1,7 @@
 package player
 
 import (
-	"Common/Utils/def"
+	"Common/def"
 	"net"
 )
 

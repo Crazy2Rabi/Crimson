@@ -1,7 +1,7 @@
 package Table
 
 import (
-	"Common/Utils/def"
+	"Common/def"
 	"encoding/json"
 	"fmt"
 	"strconv"

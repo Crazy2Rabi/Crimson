@@ -1,7 +1,7 @@
 package random
 
 import (
-	"Common/Utils/def"
+	"Common/def"
 	"math/rand"
 	"time"
 )

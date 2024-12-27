@@ -3,8 +3,8 @@ package manager
 import (
 	"Common/Table"
 	"Common/Utils"
-	"Common/Utils/def"
 	"Common/Utils/helper"
+	"Common/def"
 	"Game/player"
 	"cmp"
 	"fmt"

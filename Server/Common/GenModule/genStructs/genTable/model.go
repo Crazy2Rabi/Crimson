@@ -59,7 +59,7 @@ var TableConfigText = `package Table
 
 import (
 	{{- if .Utils}} "Common/Utils" {{- end}}
-	{{- if .Def}} "Common/Utils/def" {{- end}}
+	{{- if .Def}} "Common/def" {{- end}}
 	"encoding/json"
 	"fmt"
 	"strconv"

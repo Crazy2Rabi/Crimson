@@ -2,7 +2,7 @@ package Utils
 
 import (
 	"Common/Table"
-	"Common/Utils/def"
+	"Common/def"
 	"log/slog"
 	"math"
 )

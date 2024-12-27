@@ -2,7 +2,7 @@ package main
 
 import (
 	"Common/Table"
-	"Common/Utils/def"
+	"Common/def"
 	"Game/manager"
 	"Game/player"
 	"fmt"

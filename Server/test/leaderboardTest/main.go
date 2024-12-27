@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Common/Utils/def"
 	"Common/Utils/random"
+	"Common/def"
 	"fmt"
 	"github.com/jinzhu/now"
 	"time"
