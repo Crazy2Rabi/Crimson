@@ -11,6 +11,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 )
 
 // ParseRow 每个TbConfig结构体需要实现的接口
@@ -24,8 +25,10 @@ func Loader(file string) (buf []map[string]interface{}, err error) {
 		err = fmt.Errorf("loader table <%s> error: %v", file, err)
 		return nil, err
 	} else {
-		buf = make([]map[string]interface{}, 0)
-		if err = json.Unmarshal(str, &buf); err != nil {
+		// 方便后续处理时，将表格中所有jsonNumber类型的数字变成string
+		decoder := json.NewDecoder(strings.NewReader(string(str)))
+		decoder.UseNumber()
+		if err = decoder.Decode(&buf); err != nil {
 			err = fmt.Errorf("loader table <%s> error: %v", file, err)
 			return nil, err
 		}
